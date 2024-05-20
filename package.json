@@ -3,22 +3,27 @@
   "type": "module",
   "version": "1.0.1",
   "description": "CLI tool to confirm if you are sure. Will exit if you are not.",
-  "main": "index.js",
   "exports": {
     ".": {
       "import": {
-        "types": "./index.d.ts",
-        "default": "./index.js"
+        "types": "./src/index.d.ts",
+        "default": "./src/index.js"
       },
       "require": {
-        "types": "./legacy/require.d.cts",
-        "default": "./legacy/require.cjs"
+        "types": "./src/legacy/require.d.cts",
+        "default": "./src/legacy/require.cjs"
       }
     }
   },
+  "main": "./src/legacy/require.cjs",
+  "module": "./src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "lint:package": "publint .",
     "lint:published-types": "attw . --pack",
+    "lint": "concurrently 'npm:lint:*'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
@@ -41,6 +46,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.3",
+    "concurrently": "^8.2.2",
     "publint": "^0.2.8"
   }
 }

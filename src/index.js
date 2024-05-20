@@ -1,6 +1,6 @@
 import yesno from 'yesno';
 
-async function confirm() {
+export async function confirm() {
   let ok = await yesno({ question: 'Are you sure? (y | n)' });
 
   if (!ok) {
