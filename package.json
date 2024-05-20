@@ -1,16 +1,46 @@
 {
-  "name": "are-you-sure",
+  "name": "node-confirm",
   "type": "module",
-  "version": "1.0.0",
-  "description": "CLI tool to ask if you are sure. Will exit if you are not.",
+  "version": "1.0.1",
+  "description": "CLI tool to confirm if you are sure. Will exit if you are not.",
   "main": "index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "require": {
+        "types": "./legacy/require.d.cts",
+        "default": "./legacy/require.cjs"
+      }
+    }
+  },
   "scripts": {
+    "lint:package": "publint .",
+    "lint:published-types": "attw . --pack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cli", "interactive", "readline", "confirm", "console", "tool"],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "cli",
+    "interactive",
+    "readline",
+    "confirm",
+    "console",
+    "tool",
+    "are you sure"
+  ],
   "author": "NullVoxPopuli",
   "license": "MIT",
   "dependencies": {
     "yesno": "^0.4.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.3",
+    "publint": "^0.2.8"
   }
 }
