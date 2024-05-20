@@ -1,0 +1,16 @@
+{
+  "name": "are-you-sure",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "CLI tool to ask if you are sure. Will exit if you are not.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cli", "interactive", "readline", "confirm", "console", "tool"],
+  "author": "NullVoxPopuli",
+  "license": "MIT",
+  "dependencies": {
+    "yesno": "^0.4.0"
+  }
+}
