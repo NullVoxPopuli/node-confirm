@@ -1,7 +1,7 @@
 {
   "name": "node-confirm",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool to confirm if you are sure. Will exit if you are not.",
   "exports": {
     ".": {
