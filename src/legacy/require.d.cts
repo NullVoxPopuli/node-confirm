@@ -1,1 +1,1 @@
-export function confirm(): Promise<boolean>;
+export function confirm(): Promise<true>;
