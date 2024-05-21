@@ -1,1 +1,3 @@
-export async function confirm(): Promise<boolean>;
+export function confirm(): Promise<true>;
+
+export { confirm as areYouSure }

@@ -1,1 +1,1 @@
-module.exports.confirm = async function confirm(): Promise<boolean>;
+export function confirm(): Promise<true>;
